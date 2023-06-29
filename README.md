@@ -18,7 +18,9 @@ requests (python module)
 2. Install Pip (https://pip.pypa.io/en/stable/installation/)
 3. Install request module `pip install requests`
 4. Run `./minionsparser.py`
-5. Output will be in /tmp/minionsparser/minions.edl.txt
+5. Output will be in /tmp/minionsparser
+    - minions-v4.edl.txt = IPv4 List
+    - minions-v6.edl.txt = IPv6 List
 
 # Support Policy
 

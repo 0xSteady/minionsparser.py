@@ -80,7 +80,7 @@ v6output.writelines(v6newdata)
 
 # Sort the file by the first octet of the IP Addresses
 
-v6file = Path("/tmp/minionsparser/minions.edl.txt")
+v6file = Path("/tmp/minionsparser/minions-v6.edl.txt")
 v6file.write_text(
     "\n".join(
         sorted(

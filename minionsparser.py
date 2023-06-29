@@ -44,7 +44,7 @@ output.writelines(v4newdata)
 
 # Sort the file by the first octet of the IP Addresses
 
-v4file = Path("/tmp/minionsparser/minions.edl.txt")
+v4file = Path("/tmp/minionsparser/minions-v4.edl.txt")
 v4file.write_text(
     "\n".join(
         sorted(

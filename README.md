@@ -10,9 +10,9 @@ Python script to normalize the data contained in the file published by Binary Ed
 
 # Requirements
 
-python 3
-pip
-requests (python module)
+- python3
+- pip
+- requests (python module)
 
 # Usage
 

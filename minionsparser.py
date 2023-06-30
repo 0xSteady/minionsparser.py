@@ -31,12 +31,11 @@ for file in files:
         os.remove(file)
     print("Stale ", (file), "Deleted, Proceeding with Download")
 
+# Download and Sanitize the file to be IP Addresses, one per line
 
 v4url = "https://api.binaryedge.io/v1/minions"
 v6url = "https://api.binaryedge.io/v1/minions-ipv6"
 urls = [(v4url) , (v6url)]
-
-# Sanitize the file to be IP Addresses, one per line
 
 for url in urls:
     urldata = requests.get(url)
@@ -50,3 +49,12 @@ for url in urls:
     elif url == v6url:
         output = open("/tmp/minionsparser/minions-v6.edl.txt", "w")
         output.writelines(cleandata)
+
+# Sort the files with OS Functions
+
+for file in files: 
+    if file == (v4file):
+        os.system('sort -r -u /tmp/minionsparser/minions-v4.edl.txt -o /tmp/minionsparser/minions-v4.edl.txt')
+    elif file == (v6file):
+        os.system('sort -r -u /tmp/minionsparser/minions-v6.edl.txt -o /tmp/minionsparser/minions-v6.edl.txt')
+

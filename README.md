@@ -4,9 +4,17 @@ Python script to normalize the data contained in the file published by Binary Ed
 
 # Updates
 
-- 06-30-2023 - Added Support for IPv4 and IPv6 and removed borked sort function
+- 06-30-2023 - Added Support for IPv4 and IPv6 and fixed broken sort function
 - 06-29-2023 - Added rudamentary support for v6 feed
 - 06-29-2023 - Initial Commit
+
+# Supported OS
+
+- Currently supported on *nix based systems (linux, mac, bsd and sysV variant Unix systems)
+
+# To Do
+
+- Add Support for Windows Systems
 
 # Requirements
 

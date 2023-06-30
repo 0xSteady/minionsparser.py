@@ -23,8 +23,8 @@ from pathlib import Path
 
 # Remove old EDL Files
 
-v4file = Path("./minions-v4.edl.txt")
-v6file = Path("./minions-v6.edl.txt")
+v4file = Path("tmp/minionsparser/minions-v4.edl.txt")
+v6file = Path("/tmp/minionsparser/minions-v6.edl.txt")
 files = [(v4file) , (v6file)]
 for file in files:
     if os.path.isfile(file):
@@ -45,8 +45,8 @@ for url in urls:
     cleandata = (urldata3.replace("\", \"", "\n")) 
 
     if url == v4url:
-        output = open("./minions-v4.edl.txt", "w")
+        output = open("/tmp/minionsparser/minions-v4.edl.txt", "w")
         output.writelines(cleandata)
     elif url == v6url:
-        output = open("./minions-v6.edl.txt", "w")
+        output = open("/tmp/minionsparser/minions-v6.edl.txt", "w")
         output.writelines(cleandata)

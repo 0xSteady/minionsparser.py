@@ -21,6 +21,8 @@ import requests
 import os
 from pathlib import Path
 
+# Remove old EDL Files
+
 v4file = Path("./minions-v4.edl.txt")
 v6file = Path("./minions-v6.edl.txt")
 files = [(v4file) , (v6file)]
@@ -34,11 +36,10 @@ v4url = "https://api.binaryedge.io/v1/minions"
 v6url = "https://api.binaryedge.io/v1/minions-ipv6"
 urls = [(v4url) , (v6url)]
 
+# Sanitize the file to be IP Addresses, one per line
+
 for url in urls:
     urldata = requests.get(url)
-    # datalist = [urldata.text]
-
-    # Sanitize the file to be IPv4 Addresses, one per line
     urldata2 = urldata.text.replace("{\"scanners\": [\"", "\n")
     urldata3 = urldata2.replace("\"]}", "\n")
     cleandata = (urldata3.replace("\", \"", "\n")) 
